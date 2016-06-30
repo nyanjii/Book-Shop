@@ -76,6 +76,14 @@
     <Compile Include="Migrations\201606301003072_Migrate.Designer.cs">
       <DependentUpon>201606301003072_Migrate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606301251210_CascadeOnDelete.cs" />
+    <Compile Include="Migrations\201606301251210_CascadeOnDelete.Designer.cs">
+      <DependentUpon>201606301251210_CascadeOnDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606301304278_CascadeBooksOnGenreDelete.cs" />
+    <Compile Include="Migrations\201606301304278_CascadeBooksOnGenreDelete.Designer.cs">
+      <DependentUpon>201606301304278_CascadeBooksOnGenreDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606301003072_Migrate.resx">
       <DependentUpon>201606301003072_Migrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606301251210_CascadeOnDelete.resx">
+      <DependentUpon>201606301251210_CascadeOnDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606301304278_CascadeBooksOnGenreDelete.resx">
+      <DependentUpon>201606301304278_CascadeBooksOnGenreDelete.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

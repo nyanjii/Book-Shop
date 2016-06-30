@@ -36,3 +36,5 @@ D:\TEST\Book-Shop\BookShop\BookShop.DAL\obj\Debug\BookShop.DAL.csproj.GenerateRe
 D:\TEST\Book-Shop\BookShop\BookShop.DAL\obj\Debug\BookShop.DAL.exe
 D:\TEST\Book-Shop\BookShop\BookShop.DAL\obj\Debug\BookShop.DAL.pdb
 D:\TEST\Book-Shop\BookShop\BookShop.DAL\obj\Debug\BookShop.DAL.Migrations.Migrate.resources
+D:\TEST\Book-Shop\BookShop\BookShop.DAL\obj\Debug\BookShop.DAL.Migrations.CascadeOnDelete.resources
+D:\TEST\Book-Shop\BookShop\BookShop.DAL\obj\Debug\BookShop.DAL.Migrations.CascadeBooksOnGenreDelete.resources

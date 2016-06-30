@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookData.cs" />
+    <Compile Include="GenreData.cs" />
     <Compile Include="IBookService.cs" />
+    <Compile Include="IGenreService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

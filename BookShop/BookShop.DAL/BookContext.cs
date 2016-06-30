@@ -17,7 +17,10 @@ namespace BookShop.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Genre>().HasMany(g => g.Books).WithOptional(b => b.Genre);
+            modelBuilder.Entity<Genre>()
+                .HasMany(g => g.Books)
+                .WithOptional(b => b.Genre)
+                .WillCascadeOnDelete(true);
         }
     }
 }

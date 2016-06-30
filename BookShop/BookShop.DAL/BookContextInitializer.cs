@@ -17,7 +17,7 @@ namespace BookShop.DAL
             uow.Genres.Add(g1);
             uow.Genres.Add(g2);
 
-            Book b1 = new Book() { Title = "Harry Potter", Author = "J. K. Rowling", Cost = 17, DateOfCreating = DateTime.Now };
+            Book b1 = new Book() { Title = "Harry Potter", Author = "J. K. Rowling", Cost = 17, DateOfCreating = DateTime.Now, Genre = g1 };
             Book b2 = new Book() { Title = "Great Expectations", Author = "Charles Dickens", Cost = 172, DateOfCreating = DateTime.Now, Genre = g1 };
             Book b3 = new Book() { Title = "Cloud Atlas", Author = "David Mitchel", Cost = 149, DateOfCreating = DateTime.Now, Genre = g2 };
 

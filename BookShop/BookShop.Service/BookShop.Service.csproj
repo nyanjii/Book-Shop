@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BookService.svc" />
+    <Content Include="GenreService.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -78,6 +79,9 @@
   <ItemGroup>
     <Compile Include="BookService.svc.cs">
       <DependentUpon>BookService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="GenreService.svc.cs">
+      <DependentUpon>GenreService.svc</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
