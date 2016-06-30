@@ -17,7 +17,7 @@ namespace BookShop.Service
             var genre = new Genre()
             {
                 GenreName = item.GenreName,
-                DateOfCreating = DateTime.Now
+                LastUpdate = DateTime.Now
             };
             uow.Genres.Add(genre);
             uow.SaveChanges();

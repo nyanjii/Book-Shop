@@ -9,5 +9,6 @@ namespace BookShop.DAL.Entities
         public decimal Cost { get; set; }
 
         public Genre Genre { get; set; }
+        public int GenreId { get; set; }
     }
 }

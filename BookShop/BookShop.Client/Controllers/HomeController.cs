@@ -1,20 +1,28 @@
 ﻿using System.Web.Mvc;
 using BookShop.Proxies;
 using BookShop.Contracts;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BookShop.Client.Controllers
 {
     public class HomeController : Controller
     {
         private BookStoreClient bookClient;
+        private BookGenreClient genreClient;
 
         public HomeController()
         {
             bookClient = new BookStoreClient();
+            genreClient = new BookGenreClient();
         }
 
         public ActionResult Index()
-        {
+        { 
+            var genre = genreClient.GetAll().ToList();
+            SelectList selectList = new SelectList(genre, "Id", "GenreName");
+            ViewBag.Genres = selectList;
+
             return View(bookClient.GetAll());
         }
 
@@ -33,6 +41,9 @@ namespace BookShop.Client.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
+            var genre = genreClient.GetAll().ToList();
+            SelectList selectList = new SelectList(genre, "Id", "GenreName");
+            ViewBag.Genres = selectList;
             return View(bookClient.GetItem(id));
         }
 
@@ -45,6 +56,9 @@ namespace BookShop.Client.Controllers
 
         public ActionResult Create()
         {
+            var genre = genreClient.GetAll().ToList();
+            SelectList selectList = new SelectList(genre, "Id", "GenreName");
+            ViewBag.Genres = selectList;
             return View();
         }
 

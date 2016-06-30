@@ -19,7 +19,8 @@ namespace BookShop.DAL
         {
             modelBuilder.Entity<Genre>()
                 .HasMany(g => g.Books)
-                .WithOptional(b => b.Genre)
+                .WithRequired(b => b.Genre)
+                .HasForeignKey(b => b.GenreId)
                 .WillCascadeOnDelete(true);
         }
     }

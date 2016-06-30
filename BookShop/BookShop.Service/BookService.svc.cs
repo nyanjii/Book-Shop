@@ -19,7 +19,9 @@ namespace BookShop.Service
                 Title = item.Title,
                 Author = item.Author,
                 Cost = item.Cost,
-                DateOfCreating = DateTime.Now
+                GenreId = item.GenreId,
+                Genre = uow.Genres.Get(item.GenreId),
+                LastUpdate = DateTime.Now
             };
             uow.Books.Add(book);
             uow.SaveChanges();
@@ -37,17 +39,20 @@ namespace BookShop.Service
 
         public IEnumerable<BookData> GetAll()
         {
-            var books = uow.Books.GetAll().ToList();
+            var books = uow.Books.GetAll().ToList();            
             List<BookData> nBooks = new List<BookData>();
 
             books.ForEach(book => 
             {
+                var genreName = uow.Genres.Get(book.GenreId).GenreName;
                 BookData b = new BookData()
                 {
                     Id = book.Id,
                     Author = book.Author,
                     Title = book.Title,
-                    Cost = book.Cost
+                    Cost = book.Cost,
+                    GenreId = book.GenreId,
+                    GenreName = genreName
                 };
                 nBooks.Add(b);
             });
@@ -58,13 +63,15 @@ namespace BookShop.Service
         public BookData GetItem(int id)
         {
             var book = uow.Books.Get(id);
-
+            var genreName = uow.Genres.Get(book.GenreId).GenreName;
             return new BookData()
             {
                 Id = book.Id,
                 Author = book.Author,
                 Title = book.Title,
-                Cost = book.Cost
+                Cost = book.Cost,
+                GenreId = book.GenreId,
+                GenreName = genreName
             };
         }
 
@@ -75,12 +82,14 @@ namespace BookShop.Service
                 Id = item.Id,
                 Title = item.Title,
                 Author = item.Author,
-                Cost = item.Cost
+                Cost = item.Cost,
+                GenreId = item.GenreId,
+                Genre = uow.Genres.Get(item.GenreId),
+                LastUpdate = DateTime.Now
             };
             uow.Books.Update(book);
             uow.SaveChanges();
         }
-
 
     }
 }

@@ -84,6 +84,14 @@
     <Compile Include="Migrations\201606301304278_CascadeBooksOnGenreDelete.Designer.cs">
       <DependentUpon>201606301304278_CascadeBooksOnGenreDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606301554016_ForeignKeyResolution.cs" />
+    <Compile Include="Migrations\201606301554016_ForeignKeyResolution.Designer.cs">
+      <DependentUpon>201606301554016_ForeignKeyResolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606301800294_LastUpdate.cs" />
+    <Compile Include="Migrations\201606301800294_LastUpdate.Designer.cs">
+      <DependentUpon>201606301800294_LastUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,6 +118,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606301304278_CascadeBooksOnGenreDelete.resx">
       <DependentUpon>201606301304278_CascadeBooksOnGenreDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606301554016_ForeignKeyResolution.resx">
+      <DependentUpon>201606301554016_ForeignKeyResolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606301800294_LastUpdate.resx">
+      <DependentUpon>201606301800294_LastUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
