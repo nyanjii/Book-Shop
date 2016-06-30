@@ -1,0 +1,7 @@
+D:\TEST\BookShop\BookShop.Proxies\bin\Debug\BookShop.Proxies.dll
+D:\TEST\BookShop\BookShop.Proxies\bin\Debug\BookShop.Proxies.pdb
+D:\TEST\BookShop\BookShop.Proxies\bin\Debug\BookShop.Contracts.dll
+D:\TEST\BookShop\BookShop.Proxies\bin\Debug\BookShop.Contracts.pdb
+D:\TEST\BookShop\BookShop.Proxies\obj\Debug\BookShop.Proxies.csprojResolveAssemblyReference.cache
+D:\TEST\BookShop\BookShop.Proxies\obj\Debug\BookShop.Proxies.dll
+D:\TEST\BookShop\BookShop.Proxies\obj\Debug\BookShop.Proxies.pdb

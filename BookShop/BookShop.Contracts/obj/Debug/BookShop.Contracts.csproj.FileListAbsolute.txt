@@ -1,0 +1,5 @@
+D:\TEST\BookShop\BookShop.Contracts\bin\Debug\BookShop.Contracts.dll
+D:\TEST\BookShop\BookShop.Contracts\bin\Debug\BookShop.Contracts.pdb
+D:\TEST\BookShop\BookShop.Contracts\obj\Debug\BookShop.Contracts.csprojResolveAssemblyReference.cache
+D:\TEST\BookShop\BookShop.Contracts\obj\Debug\BookShop.Contracts.dll
+D:\TEST\BookShop\BookShop.Contracts\obj\Debug\BookShop.Contracts.pdb
