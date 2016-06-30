@@ -8,21 +8,35 @@ namespace BookShop.DAL
     public class UnitOfWork : IUnitOfWork
     {
         private BookContext _context;
-        private IRepository<Book> _repository;
+        private IRepository<Book> _bookRepository;
+        private IRepository<Genre> _genreRepository;
         private RepositoryFactory _factory;
         private bool _disposed = false;
 
-        public IRepository<Book> Repository
+        public IRepository<Book> Books
         {
             get
             {
-                if (_repository == null)
+                if (_bookRepository == null)
                 {
                     _factory.Open(_context);
-                    _repository = _factory.GetRepository<BookRepository>();
+                    _bookRepository = _factory.GetRepository<BookRepository>();
                     _factory.Close();
                 }
-                return _repository;
+                return _bookRepository;
+            }
+        }
+        public IRepository<Genre> Genres
+        {
+            get
+            {
+                if (_genreRepository == null)
+                {
+                    _factory.Open(_context);
+                    _genreRepository = _factory.GetRepository<GenreRepository>();
+                    _factory.Close();
+                }
+                return _genreRepository;
             }
         }
 

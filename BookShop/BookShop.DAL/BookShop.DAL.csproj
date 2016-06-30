@@ -67,19 +67,22 @@
     <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Core\RepositoryBase.cs" />
     <Compile Include="Entities\Book.cs" />
+    <Compile Include="Entities\Genre.cs" />
     <Compile Include="Migrations\201606300802471_InitialCreate.cs" />
     <Compile Include="Migrations\201606300802471_InitialCreate.Designer.cs">
       <DependentUpon>201606300802471_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201606300806549_MigrateDB.cs" />
-    <Compile Include="Migrations\201606300806549_MigrateDB.Designer.cs">
-      <DependentUpon>201606300806549_MigrateDB.cs</DependentUpon>
+    <Compile Include="Migrations\201606301003072_Migrate.cs" />
+    <Compile Include="Migrations\201606301003072_Migrate.Designer.cs">
+      <DependentUpon>201606301003072_Migrate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoriesInterfaces\IBookRepository.cs" />
+    <Compile Include="RepositoriesInterfaces\IGenreRepository.cs" />
     <Compile Include="Repositories\BookRepository.cs" />
+    <Compile Include="Repositories\GenreRepository.cs" />
     <Compile Include="RepositoryFactory.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
@@ -91,8 +94,8 @@
     <EmbeddedResource Include="Migrations\201606300802471_InitialCreate.resx">
       <DependentUpon>201606300802471_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606300806549_MigrateDB.resx">
-      <DependentUpon>201606300806549_MigrateDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606301003072_Migrate.resx">
+      <DependentUpon>201606301003072_Migrate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

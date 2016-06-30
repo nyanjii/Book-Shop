@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using BookShop.DAL.Entities;
+using System.Data.Entity;
 
 namespace BookShop.DAL
 {
@@ -11,6 +12,12 @@ namespace BookShop.DAL
 
         public BookContext() : base("BooksDBConnection") { }
 
-        public DbSet<Entities.Book> Books { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Genre>().HasMany(g => g.Books).WithOptional(b => b.Genre);
+        }
     }
 }

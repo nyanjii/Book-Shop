@@ -17,5 +17,6 @@ namespace BookShop.Contracts
         [DataMember]
         public decimal Cost { get; set; }
 
+
     }
 }

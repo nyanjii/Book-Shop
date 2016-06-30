@@ -21,7 +21,7 @@ namespace BookShop.Service
                 Cost = item.Cost,
                 DateOfCreating = DateTime.Now
             };
-            uow.Repository.Add(book);
+            uow.Books.Add(book);
             uow.SaveChanges();
         }
 
@@ -31,13 +31,13 @@ namespace BookShop.Service
             {
                 Id = item.Id
             };
-            uow.Repository.Delete(book);
+            uow.Books.Delete(book);
             uow.SaveChanges();
         }
 
         public IEnumerable<BookData> GetAll()
         {
-            var books = uow.Repository.GetAll().ToList();
+            var books = uow.Books.GetAll().ToList();
             List<BookData> nBooks = new List<BookData>();
 
             books.ForEach(book => 
@@ -57,7 +57,7 @@ namespace BookShop.Service
 
         public BookData GetItem(int id)
         {
-            var book = uow.Repository.Get(id);
+            var book = uow.Books.Get(id);
 
             return new BookData()
             {
@@ -77,7 +77,7 @@ namespace BookShop.Service
                 Author = item.Author,
                 Cost = item.Cost
             };
-            uow.Repository.Update(book);
+            uow.Books.Update(book);
             uow.SaveChanges();
         }
     }

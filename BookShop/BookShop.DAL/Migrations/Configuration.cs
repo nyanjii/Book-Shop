@@ -1,5 +1,7 @@
 namespace BookShop.DAL.Migrations
 {
+    using Core;
+    using Entities;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -9,24 +11,12 @@ namespace BookShop.DAL.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "BookShop.DAL.BookContext";
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(BookShop.DAL.BookContext context)
+        protected override void Seed(BookContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            
         }
     }
 }

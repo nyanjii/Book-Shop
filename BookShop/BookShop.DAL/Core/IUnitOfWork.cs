@@ -9,7 +9,9 @@ namespace BookShop.DAL.Core
 {
     public interface IUnitOfWork : IDisposable
     {
-        IRepository<Book> Repository {get; }
+        IRepository<Book> Books {get; }
+        IRepository<Genre> Genres { get; }
+
         void SaveChanges();        
     }
 }
